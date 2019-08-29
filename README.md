@@ -13,3 +13,4 @@ There are three overarching goals for hush. They are:
 - [tantivy](https://github.com/tantivy-search/tantivy), for a full-text search engine
 - [tui-rs](https://github.com/fdehau/tui-rs), for the terminal interface
 - [orion](https://github.com/brycx/orion), for cryptography
+- [zxcvbn](https://github.com/shssoichiro/zxcvbn-rs), for password-strength estimation
