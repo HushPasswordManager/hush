@@ -11,7 +11,7 @@ There are four overarching goals for Hush.
 
 ## Security
 ### WARNING
-**Hush should not yet be used where real security is required.** This is for two reasons. First, the cryptographic library underlying Hush (orion, see [Technology Stack]) has not undergone a formal security audit. Second, Hush itself has not undergone a security audit. Before this warning is removed, at the very least orion will need a thorough security audit. If/when it gets one, the developers of Hush will seek an expert opinion on whether the same should be done for Hush itself.
+**Hush should not yet be used where real security is required.** This is for two reasons. First, the cryptographic library underlying Hush (orion, see [Technology Stack](#Technology Stack)) has not undergone a formal security audit. Second, Hush itself has not undergone a security audit. Before this warning is removed, at the very least orion will need a thorough security audit. If/when it gets one, the developers of Hush will seek an expert opinion on whether the same should be done for Hush itself.
 
 ### Cryptographic Components
 Hush takes an approach similar to [WireGuard](https://www.wireguard.com/) when it comes to selection of cryptographic primitives and algorithms. The developers endeavor to choose the best possible (most secure) primitives, and give the user no options, so as to prevent users from accidentally compromising their own security. If one of Hush's primitives becomes outdated, it will be repealed and replaced with whatever is the current state of the art. Here are the current choices.
