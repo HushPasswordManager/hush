@@ -51,7 +51,7 @@ What *actually* makes Hush a better password manager? Here are a list of feature
 - [orion](https://crates.io/crates/orion), for cryptography
 - [zxcvbn](https://crates.io/crates/zxcvbn-rs), for password-strength estimation
 
-## Non-Security Core Stack
+### Non-Security Core Stack
 - [msgpack](https://msgpack.org/), for inter-process communication
 - [sqlite](https://sqlite.org/index.html) + [diesel](http://diesel.rs/), for database management
 - [strsim](https://crates.io/crates/strsim), for fuzzy searching
