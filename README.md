@@ -1,4 +1,4 @@
-![hush: do few things, and do them well](./assets/hush-logo.png)
+![hush: do few things, and do them well](./assets/hush-logo.svg)
 
 # Hush
 Hush is a minimalistic password manager written in Rust.
