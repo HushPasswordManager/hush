@@ -19,7 +19,7 @@ There are four overarching goals for Hush.
 Hush takes an approach similar to [WireGuard](https://www.wireguard.com/) when it comes to selection of cryptographic primitives and algorithms. The developers endeavor to choose the best possible (most secure) primitives, and give the user no options, so as to prevent users from accidentally compromising their own security. If one of Hush's primitives becomes outdated, it will be repealed and replaced with whatever is the current state of the art. Here are the current choices.
 - Argon2i for password hashing
 - XSalsa20-Poly1305 for encrypting data
-- HMAC (SHA2-256) for inter-process message authentication
+- BLAKE2b-256 in keyed mode (MAC) for inter-process message authentication
 - OS-provided random numbers for anything involving random numbers (e.g. passphrase generation, nonces, etc.)
 
 ## Why Not to Use Hush
