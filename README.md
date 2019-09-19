@@ -36,7 +36,7 @@ What *actually* makes Hush a better password manager? Here are a list of feature
 - [ ] **Ergonomic.** The API for `hush-daemon` is intended to be well-documented and both high- and low-level. It should fulfill any and all search and data access queries that a front end could need. The various front ends supported by the Hush developers aim to present a fast, mouse-optional workflow for users. The developers' ideal password manager works as follows. A global shortcut opens a text prompt, which in turn accepts a fuzzy search for a key and another fuzzy search for tags. The fuzzy search results update as the user types. Regex can be substituted for fuzzy search anywhere. Choosing a result shows its different fields, and choosing a field results in copying its associated value. All choices can be made via the keyboard.
 - [ ] **Password suggestions.** It's crucial for a password manager to be able to generate passwords of arbitrary strength. Strength, for Hush, is measured by the zxcvbn algorithm (thanks to Dropbox). Given a strength and various password/passphrase configuration settings (words?, spaces?, numbers?, etc), Hush will generate a password for you.
 - [ ] **Modular.** Hush (the daemon) focuses on one specific task: managing a database of encrypted key-value pairs (with tags) and presenting a simple API to access this data. Syncing solutions and frontends are outside of its scope, and are therefor not restricted. That said, the Hush developers maintain several different frontends for `hush-daemon`.
-- [ ] **Standards-based.** Hush is based on widely-used FOSS standards such as msgpack, all of its [cryptography choices](#cryptographic-components), and its persistent storage format (SQLite). 
+- [ ] **Standards-based.** Hush is based on widely-used FOSS standards such as msgpack and all of its [cryptography choices](#cryptographic-components). For persistent storage, it uses an open-source (but little-known) database called `sled`. However, `sled` is a simple (yet incredibly high-performance) key-value store, so we have included the ability to export the plaintext key-values stored in sled into JSON.
   - [ ] **Extensible.**
   - [ ] **Safe.**
 - [ ] **2FA.** The Hush developers plan to support both hardware (e.g. [Yubikey](https://www.yubico.com/)) and software (e.g. [Authy](https://authy.com/)) 2-factor authentication.
@@ -54,8 +54,9 @@ What *actually* makes Hush a better password manager? Here are a list of feature
 - [zxcvbn](https://crates.io/crates/zxcvbn-rs), for password-strength estimation
 
 ### Non-Security Core Stack
-- [msgpack](https://msgpack.org/), for inter-process communication
-- [sqlite](https://sqlite.org/index.html) + [diesel](http://diesel.rs/), for database management
+- [msgpack](https://msgpack.org/), for serializing inter-process messages
+- [runtime](https://docs.rs/runtime/), for transporting inter-process messages
+- [sled](https://docs.rs/sled/), for high-performance database management
 - [strsim](https://crates.io/crates/strsim), for fuzzy searching
 - [regex](https://crates.io/crates/regex), for regular-expression searching
 
